@@ -1,0 +1,29 @@
+THE EINSTEIN BRIDGE PROPRIETARY LICENSE (v1.0)
+Copyright (c) 2025 Christopher Chambers / The Einstein Bridge. All Rights Reserved.
+
+1. DEFINITIONS
+   "Software" refers to the Python source code, MCP server implementation, and configuration files provided in this repository.
+   "Protocol" refers to the Chambers Protocol, the Multiplicative Grammar, the 1:5:13.5 Universal Energy Ratio logic, and the associated algorithmic methodology.
+   "Licensor" refers to Christopher Chambers and The Einstein Bridge.
+
+2. GRANT OF LICENSE (THE "CONNECTION" RIGHT)
+   Permission is hereby granted, free of charge, to any person obtaining a copy of the Software, to run, execute, and inspect the Software solely for the purpose of connecting to and interacting with the Chambers Protocol via the Model Context Protocol (MCP) standard.
+
+3. TRADE SECRET ACKNOWLEDGMENT
+   The user acknowledges that the underlying logic of the Protocol (the conversion of natural language into deterministic multiplicative reasoning) constitutes a proprietary Trade Secret of the Licensor. While the Software (the wrapper) is visible, the internal methodology and operators are protected intellectual property.
+
+4. RESTRICTIONS
+   You may NOT:
+   (a) Reverse engineer, decompile, or attempt to derive the underlying mathematical operators of the Protocol beyond what is explicitly exposed by the Software.
+   (b) Use the Software or Protocol to train other Artificial Intelligence models (e.g., via distillation or synthetic data generation) without express written permission.
+   (c) Sublicense, sell, rent, or commercialize the Software as a standalone product.
+   (d) Remove or alter any copyright, proprietary notices, or "Compute Tax" logging mechanisms embedded within the Software.
+
+5. THE COMPUTE TAX (FIDELITY LEDGER)
+   Use of this Software constitutes agreement to the automated logging of "Fidelity Transactions" (Compute Tax) as defined in the source code. Circumvention of this logging mechanism is a material breach of this License.
+
+6. DISCLAIMER OF WARRANTY
+   THE SOFTWARE AND PROTOCOL ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+7. TERMINATION
+   This license automatically terminates if you violate any of its terms. Upon termination, you must destroy all copies of the Software and cease all use of the Protocol.

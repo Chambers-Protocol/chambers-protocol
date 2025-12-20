@@ -1,0 +1,12 @@
+[
+  {
+    "transaction_id": "GENESIS_BLOCK_001",
+    "timestamp": "2025-12-17T00:00:00Z",
+    "client_id": "SYSTEM_ROOT",
+    "operation": "LEDGER_INITIALIZATION",
+    "fidelity_guarantee": "100%",
+    "tax_captured": 0.0,
+    "currency": "USD",
+    "status": "IMMUTABLE"
+  }
+]

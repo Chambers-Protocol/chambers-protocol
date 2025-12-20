@@ -1,0 +1,10 @@
+[project]
+name = "chambers-protocol"
+version = "0.1.0"
+description = "A Model Context Protocol (MCP) server that enforces Multiplicative Grammar (U=ci^3) for high-fidelity AI reasoning."
+dependencies = [
+    "mcp[cli]",
+]
+
+[project.scripts]
+server = "server:main"
