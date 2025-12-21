@@ -1,40 +1,49 @@
+# Chambers Protocol  
+**Deterministic Reasoning Infrastructure for Entropy-Bound Systems**
+
+[![Checkout $1,000 for 1,000,000 Credits](https://img.shields.io/badge/Checkout-$1,000%20for%201,000,000%20credits-black)](https://buy.stripe.com/6oUeVf0Nv61GgWR5i81kA00)
+![Billing](https://img.shields.io/badge/Billing-Atomic-green)
+![Ledger](https://img.shields.io/badge/Ledger-Append--Only-blue)
+![Pricing](https://img.shields.io/badge/Price-$0.01%20per%20call-black)
+
+---
+
 ## Purchase Access
 
 **$1,000 USD → 1,000,000 Credits**  
 Each invocation consumes **10 credits** and generates a **$0.01 fidelity tax**.
 
-➡️ **Purchase Credits (Stripe Checkout):** https://buy.stripe.com/6oUeVf0Nv61GgWR5i81kA00
+➡️ **Stripe Checkout:** https://buy.stripe.com/6oUeVf0Nv61GgWR5i81kA00
 
-[![Checkout $1000 for 1,000,000 Credits](https://img.shields.io/badge/Checkout-$1,000%20for%201,000,000%20credits-black)](https://buy.stripe.com/6oUeVf0Nv61GgWR5i81kA00)
-![Billing](https://img.shields.io/badge/Billing-Atomic-green)
-![Ledger](https://img.shields.io/badge/Ledger-Append--Only-blue)
-![Pricing](https://img.shields.io/badge/Price-$0.01%20per%20call-black)
+> After payment, your API key will be generated and delivered via email.
 
-If you prefer GitHub workflow: open a purchase request here:
+If you prefer GitHub workflow, open a purchase request:  
 https://github.com/Chambers-Protocol/chambers-protocol/issues/new?template=purchase.yml
 
+---
 
-Chambers Protocol
-
-Deterministic Reasoning Infrastructure for Entropy-Bound Systems
-
-Overview
+## Overview
 
 Chambers Protocol is a mechanically enforced reasoning and billing layer designed to operate at the boundary between human input and machine computation.
 
 It exists to solve a specific problem:
 
-Unbounded natural language generates entropy.
-Entropy generates heat.
-Heat limits computation.
+- Unbounded natural language generates entropy.  
+- Entropy generates heat.  
+- Heat limits computation.
 
 Chambers Protocol constrains this process by enforcing deterministic transformation, atomic accounting, and auditable cost surfaces at the moment computation is invoked.
 
 This repository hosts the MCP Server implementation of the protocol.
 
-What This Is (Precisely)
+---
 
-A Model Context Protocol (MCP) Server
+## What This Is (Precisely)
+
+- A Model Context Protocol (MCP) Server
+- A deterministic transform gate between user input and model execution
+- A credit-metered, entropy-bounded compute interface
+- A write-once, auditable fidelity ledger
 
 A deterministic transform gate between user input and model execution
 
