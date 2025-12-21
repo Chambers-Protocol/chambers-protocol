@@ -1,3 +1,7 @@
+![Billing](https://img.shields.io/badge/Billing-Atomic-green)
+![Ledger](https://img.shields.io/badge/Ledger-Append--Only-blue)
+![Pricing](https://img.shields.io/badge/Price-$0.01%20per%20call-black)
+
 Chambers Protocol
 
 Deterministic Reasoning Infrastructure for Entropy-Bound Systems
