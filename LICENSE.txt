@@ -1,29 +1,160 @@
-THE EINSTEIN BRIDGE PROPRIETARY LICENSE (v1.0)
-Copyright (c) 2025 Christopher Chambers / The Einstein Bridge. All Rights Reserved.
+Chambers Protocol Commercial License
 
-1. DEFINITIONS
-   "Software" refers to the Python source code, MCP server implementation, and configuration files provided in this repository.
-   "Protocol" refers to the Chambers Protocol, the Multiplicative Grammar, the 1:5:13.5 Universal Energy Ratio logic, and the associated algorithmic methodology.
-   "Licensor" refers to Christopher Chambers and The Einstein Bridge.
+Version 1.0
 
-2. GRANT OF LICENSE (THE "CONNECTION" RIGHT)
-   Permission is hereby granted, free of charge, to any person obtaining a copy of the Software, to run, execute, and inspect the Software solely for the purpose of connecting to and interacting with the Chambers Protocol via the Model Context Protocol (MCP) standard.
+© The Einstein Bridge, Inc.
+All rights reserved.
 
-3. TRADE SECRET ACKNOWLEDGMENT
-   The user acknowledges that the underlying logic of the Protocol (the conversion of natural language into deterministic multiplicative reasoning) constitutes a proprietary Trade Secret of the Licensor. While the Software (the wrapper) is visible, the internal methodology and operators are protected intellectual property.
+1. Definitions
 
-4. RESTRICTIONS
-   You may NOT:
-   (a) Reverse engineer, decompile, or attempt to derive the underlying mathematical operators of the Protocol beyond what is explicitly exposed by the Software.
-   (b) Use the Software or Protocol to train other Artificial Intelligence models (e.g., via distillation or synthetic data generation) without express written permission.
-   (c) Sublicense, sell, rent, or commercialize the Software as a standalone product.
-   (d) Remove or alter any copyright, proprietary notices, or "Compute Tax" logging mechanisms embedded within the Software.
+“Software”
+The Chambers Protocol MCP Server, including all source code, configuration files, descriptors, schemas, documentation, and related materials contained in this repository.
 
-5. THE COMPUTE TAX (FIDELITY LEDGER)
-   Use of this Software constitutes agreement to the automated logging of "Fidelity Transactions" (Compute Tax) as defined in the source code. Circumvention of this logging mechanism is a material breach of this License.
+“Protocol”
+The deterministic transformation, billing, and ledger mechanisms collectively referred to as the Chambers Protocol.
 
-6. DISCLAIMER OF WARRANTY
-   THE SOFTWARE AND PROTOCOL ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+“Credits”
+Prepaid units of execution capacity required to invoke the Protocol.
 
-7. TERMINATION
-   This license automatically terminates if you violate any of its terms. Upon termination, you must destroy all copies of the Software and cease all use of the Protocol.
+“API Key”
+A cryptographic credential issued to a Licensee enabling access to the Protocol.
+
+“Fidelity Ledger”
+The append-only audit system that records protocol execution, credit consumption, and fidelity taxes.
+
+“Licensee”
+The individual or entity purchasing credits and receiving an API Key.
+
+2. License Grant (Source Availability)
+
+Subject to the terms of this License, Chambers Capital Ventures, Inc. (“Licensor”) grants you a non-exclusive, non-transferable, revocable license to:
+
+View the source code
+
+Clone the repository
+
+Inspect, audit, and evaluate the Software
+
+Modify the Software for internal, non-commercial research purposes only
+
+This grant does not include the right to operate the Software commercially.
+
+3. Commercial Use Restriction
+
+Commercial use of the Software is prohibited unless:
+
+You have purchased credits via an authorized payment processor (Stripe), and
+
+You are using a valid, active API Key issued by Licensor, and
+
+All protocol invocations consume credits and generate fidelity tax entries as designed.
+
+Running the MCP server, exposing its tools, or invoking the Protocol without credit enforcement constitutes unauthorized commercial use.
+
+4. Billing & Enforcement
+
+Each Protocol invocation consumes credits and generates a fidelity tax.
+
+Credit consumption must be atomic and deterministic.
+
+Any attempt to bypass, disable, or modify billing logic voids this license immediately.
+
+Ledger entries are the authoritative record of usage.
+
+5. Prohibited Actions
+
+You may not:
+
+Circumvent or disable credit consumption
+
+Bypass the fidelity ledger
+
+Remove or falsify audit records
+
+Resell, sublicense, or transfer API keys
+
+Offer the Protocol as a service to third parties without written authorization
+
+Represent the Protocol as your own work
+
+Use the Software to generate deceptive, misleading, or fraudulent outputs
+
+6. API Key Handling
+
+API keys are issued once and displayed once.
+
+Lost keys cannot be recovered.
+
+Compromised keys must be rotated.
+
+Licensee is responsible for all activity performed using their key.
+
+Licensor is not responsible for misuse of leaked credentials.
+
+7. Modifications & Derivative Works
+
+You may modify the Software for internal evaluation only.
+
+You may not deploy, distribute, or monetize modified versions of the Software without explicit written permission from Licensor.
+
+All derivative works remain subject to this License.
+
+8. Audit & Transparency
+
+Licensee acknowledges and agrees that:
+
+All protocol usage is logged
+
+Ledger entries are immutable
+
+Ledger data may be used for billing, dispute resolution, and abuse detection
+
+No attempt should be made to interfere with audit mechanisms.
+
+9. Termination
+
+This License terminates automatically if:
+
+Payment is reversed or charged back
+
+Credits are exhausted
+
+Licensee violates any term of this License
+
+Billing or audit mechanisms are tampered with
+
+Upon termination, all rights granted under this License cease immediately.
+
+10. Disclaimer of Warranty
+
+THE SOFTWARE IS PROVIDED “AS IS”.
+
+LICENSOR DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+11. Limitation of Liability
+
+IN NO EVENT SHALL LICENSOR BE LIABLE FOR:
+
+LOST PROFITS
+
+LOST DATA
+
+BUSINESS INTERRUPTION
+
+INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES
+
+TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT PAID BY LICENSEE IN THE PRECEDING 12 MONTHS.
+
+12. Governing Law
+
+This License shall be governed by and construed in accordance with the laws of the State of Delaware, United States, without regard to conflict of law principles.
+
+13. Entire Agreement
+
+This License constitutes the entire agreement between the parties regarding the Software and supersedes all prior agreements or understandings.
+
+14. Contact
+
+Questions regarding licensing should be directed to:
+
+research@theeinsteinbridge.com

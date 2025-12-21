@@ -1,0 +1,17 @@
+{
+  "schema": "mcp.descriptor.v1",
+  "server": {
+    "id": "chambers-protocol",
+    "version": "0.1.0",
+    "entrypoint": { "command": "python", "args": ["server.py"] }
+  },
+  "capabilities": [
+    { "id": "meta.descriptor", "type": "meta", "tool": "meta_descriptor", "deterministic": true },
+    { "id": "protocol.compile", "type": "transform", "tool": "protocol_compile", "deterministic": true },
+    { "id": "ledger.evaluate", "type": "analyze", "tool": "ledger_evaluate", "deterministic": true }
+  ],
+  "artifacts": {
+    "kernel": "CHAMBERS_NODE_KERNEL.py",
+    "ledger": "fidelity_ledger.json"
+  }
+}

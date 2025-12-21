@@ -1,0 +1,12 @@
+@mcp.tool(name="ledger.evaluate")
+def ledger_evaluate(client_id: str = "", limit: int = 50) -> dict:
+    if os.path.exists(LOCAL_LEDGER_FILE):
+        with open(LOCAL_LEDGER_FILE, "r", encoding="utf-8") as f:
+            ledger = json.load(f)
+    else:
+        ledger = []
+
+    if client_id:
+        ledger = [e for e in ledger if e.get("client_id") == client_id or e.get("client") == client_id]
+
+    return {"count": len(ledger[-limit:]), "entries": ledger[-limit:]}

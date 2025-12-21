@@ -8,5 +8,13 @@
     "tax_captured": 0.0,
     "currency": "USD",
     "status": "IMMUTABLE"
+  },
+  {
+    "timestamp": "2025-12-21T02:44:33.699009",
+    "client_id": "supply_chain_restructure",
+    "operation": "SYNTAX_CONVERSION",
+    "fidelity_guarantee": "99.999999999%",
+    "tax_captured": 0.001,
+    "currency": "USD"
   }
 ]
