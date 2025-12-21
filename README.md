@@ -1,6 +1,18 @@
+## Purchase Access
+
+**$1,000 USD → 1,000,000 Credits**  
+Each invocation consumes **10 credits** and generates a **$0.01 fidelity tax**.
+
+➡️ **Purchase Credits (Stripe Checkout):** https://buy.stripe.com/6oUeVf0Nv61GgWR5i81kA00
+
+[![Checkout $1000 for 1,000,000 Credits](https://img.shields.io/badge/Checkout-$1,000%20for%201,000,000%20credits-black)](https://buy.stripe.com/6oUeVf0Nv61GgWR5i81kA00)
 ![Billing](https://img.shields.io/badge/Billing-Atomic-green)
 ![Ledger](https://img.shields.io/badge/Ledger-Append--Only-blue)
 ![Pricing](https://img.shields.io/badge/Price-$0.01%20per%20call-black)
+
+If you prefer GitHub workflow: open a purchase request here:
+https://github.com/Chambers-Protocol/chambers-protocol/issues/new?template=purchase.yml
+
 
 Chambers Protocol
 

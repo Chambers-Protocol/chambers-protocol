@@ -1,3 +1,7 @@
+## Stripe Checkout Link
+
+➡️ https://buy.stripe.com/PASTE_YOUR_LINK_HERE
+
 Purchasing Access to Chambers Protocol
 
 This document describes the only supported method for purchasing access to the Chambers Protocol MCP Server.
