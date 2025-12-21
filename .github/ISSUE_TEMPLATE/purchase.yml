@@ -1,0 +1,16 @@
+name: Purchase Chambers Protocol Access
+title: "Purchase: 1,000,000 Credits"
+labels: ["purchase"]
+body:
+  - type: input
+    id: email
+    attributes:
+      label: Billing Email
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        Price: $1,000 USD  
+        Credits: 1,000,000  
+        Fulfillment via Stripe + email delivery.
