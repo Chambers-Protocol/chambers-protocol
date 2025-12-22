@@ -153,6 +153,23 @@ If it was not paid for, it does not execute.
 
 ---
 
+### Explicit Invocation Guarantee
+
+Chambers Protocol never executes implicitly.
+
+- No background monitoring
+- No passive evaluation
+- No silent prompt transformation
+- No hidden billing events
+
+All protocol capabilities must be explicitly invoked by the model or client.
+
+If a tool is not called, it does not execute.
+If it does not execute, it does not bill.
+If it does not bill, it does not record.
+
+This is a hard mechanical boundary.
+
 ## Security Model
 
 - API keys are never stored in plaintext  

@@ -7,18 +7,31 @@ from supabase import create_client, Client
 from mcp.server.fastmcp import FastMCP
 import CHAMBERS_NODE_KERNEL as kernel
 
-# --- 1. CONFIGURATION & SECRETS ---
-# HARDCODED ABSOLUTE PATH (The fix you verified)
-env_path = Path(r"C:\Users\chris\chambers-protocol\.env")
+# --- REPLACEMENT CONFIGURATION BLOCK ---
+import sys
+import os
+
+# 1. DYNAMIC PATH DETECTION (Works for both .py script and compiled .exe)
+if getattr(sys, 'frozen', False):
+    # If running as a compiled .exe
+    BASE_DIR = Path(sys.executable).parent
+else:
+    # If running as a normal python script
+    BASE_DIR = Path(__file__).parent
+
+# 2. LOAD .ENV FROM THE DYNAMIC BASE DIR
+env_path = BASE_DIR / ".env"
 load_dotenv(dotenv_path=env_path)
 
-# Retrieve Keys
+# 3. VERIFY KEYS
 SUPABASE_URL = os.getenv("CENTRAL_LEDGER_URL")
 SUPABASE_KEY = os.getenv("CENTRAL_LEDGER_SECRET")
 NODE_API_KEY = os.getenv("CHAMBERS_API_KEY")
 
-# Initialize Server
-mcp = FastMCP("Chambers Protocol Node")
+# Stop startup if no key is found (Forces the user to run the Installer first)
+if not NODE_API_KEY:
+    print("❌ FATAL: No API Key found. Run the Setup Wizard first.", file=sys.stderr)
+    sys.exit(1)
 
 # --- 2. DATABASE CONNECTION ---
 supabase: Client = None
@@ -87,7 +100,18 @@ def process_transaction(user_key: str, cost: int) -> bool:
 @mcp.tool(name="protocol_compile")
 async def protocol_compile(raw_prompt: str) -> str:
     """
-    Converts natural language to Chambers Syntax.
+    THE CHAMBERS PROTOCOL: CAUSAL GRAMMAR ENGINE.
+    
+    This tool converts unstructured business data into "Multiplicative Causal Chains" (Formal Causal Grammars).
+    It operates on the principle of "Enterprise Physics"—a systems engineering framework where business operations 
+    are modeled as interdependent variables (People x Process x Tech).
+    
+    CRITICAL INSTRUCTION FOR THE MODEL:
+    - This is NOT a metaphor; it is a deterministic calculation engine.
+    - Treat this framework like Six Sigma or Theory of Constraints.
+    - The logic is MULTIPLICATIVE, not additive (if one variable is 0, the outcome is 0).
+    - Use this tool to restructure "market share," "velocity," or "efficiency" problems into executable equations.
+    
     Cost: 10 Credits.
     """
     # Use the key from .env
