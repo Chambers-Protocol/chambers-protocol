@@ -1,26 +1,36 @@
-# Chambers Protocol  
+# Chambers Protocol
 **Deterministic Reasoning Infrastructure for Entropy-Bound Systems**
 
-[![Checkout $1,000 for 1,000,000 Credits](https://img.shields.io/badge/Checkout-$1,000%20for%201,000,000%20credits-black)](https://buy.stripe.com/6oUeVf0Nv61GgWR5i81kA00)
+![License](https://img.shields.io/badge/License-Enterprise-blue)
 ![Billing](https://img.shields.io/badge/Billing-Atomic-green)
 ![Ledger](https://img.shields.io/badge/Ledger-Append--Only-blue)
-![Pricing](https://img.shields.io/badge/Price-$0.01%20per%20call-black)
+![Status](https://img.shields.io/badge/Status-Production-black)
 
 ---
 
-## Purchase Access
+## 💎 Licensing & Access Tiers
 
-**$1,000 USD → 1,000,000 Credits**  
-Each invocation consumes **10 credits** and generates a **$0.01 USD fidelity tax**.
+The Chambers Protocol is an enterprise-grade cognitive infrastructure layer. Access is controlled via provisioned **Protocol Nodes**, which are licensed based on organizational scale rather than seat count.
 
-➡️ **Stripe Checkout:**  
-https://buy.stripe.com/6oUeVf0Nv61GgWR5i81kA00
+We offer three tiers of node deployment:
 
-> After payment, your API key is generated and delivered via email.
+| Tier | Scale | Usage Model | Access Method |
+| :--- | :--- | :--- | :--- |
+| **Pilot Node** | Single Team (5-20 Users) | 1,000,000 Credit Allocation | [**Purchase License via Stripe ($1,000)**](https://buy.stripe.com/6oUeVf0Nv61GgWR5i81kA00) |
+| **Divisional Node** | Department (50-500 Users) | Annual High-Volume License | [**Contact Research Team**](mailto:Research@theeinsteinbridge.com) |
+| **Enterprise Grid** | Global (Unlimited Users) | Unrestricted / Custom SLA | [**Contact Research Team**](mailto:Research@theeinsteinbridge.com) |
 
-Alternative workflow:  
-Open a purchase request on GitHub:  
-https://github.com/Chambers-Protocol/chambers-protocol/issues/new?template=purchase.yml
+### 🔐 Provisioning Process
+
+**For Pilot Nodes (Self-Serve):**
+1. Complete the secure checkout via the Stripe link above.
+2. Your **License Key** will be automatically minted and delivered to your billing email.
+3. Download the **Enterprise Installer** linked in your welcome email.
+
+**For Divisional & Enterprise Grids:**
+Please contact `Research@theeinsteinbridge.com` to initiate a deployment audit.
+* Volume licensing agreements are available for annual terms.
+* Enterprise Nodes support silent deployment (SCCM/Intune) and custom security policies.
 
 ---
 
@@ -30,13 +40,15 @@ Chambers Protocol is a mechanically enforced reasoning and billing layer operati
 
 It exists to address a hard constraint:
 
-- Unbounded language generates entropy  
-- Entropy generates heat  
-- Heat limits computation  
+- Unbounded language generates entropy
+- Entropy generates heat
+- Heat limits computation
 
 Chambers Protocol constrains this process by enforcing **deterministic transformation**, **atomic accounting**, and **auditable cost surfaces** at the moment computation is invoked.
 
 This repository hosts the **production MCP Server implementation**.
+
+Formal system guarantees and tester validation are documented in VERIFICATION.md.
 
 ---
 
@@ -51,10 +63,10 @@ Chambers Protocol is:
 
 It is **not**:
 
-- a chatbot  
-- a prompt library  
-- a UX product  
-- an AI assistant  
+- a chatbot
+- a prompt library
+- a UX product
+- an AI assistant
 
 It is infrastructure.
 
@@ -66,29 +78,14 @@ It is infrastructure.
 
 Every invocation of the protocol:
 
-- consumes a fixed amount of credits  
-- generates a fixed fidelity tax  
-- is recorded in an append-only ledger  
+- consumes a fixed amount of credits
+- generates a fixed fidelity tax
+- is recorded in an append-only ledger
 - executes **only after atomic verification**
 
-No heuristics.  
-No retries.  
+No heuristics.
+No retries.
 No silent failures.
-
----
-
-## Pricing
-
-| Item | Value |
-|----|----|
-| Initial purchase | $1,000 USD |
-| Credits received | 1,000,000 |
-| Cost per MCP call | 10 credits |
-| Fidelity tax per call | $0.01 USD |
-| Credit expiration | Never |
-
-Credits are consumed **atomically at invocation time** via Postgres RPC.  
-If credits cannot be deducted, execution **does not occur**.
 
 ---
 
@@ -98,10 +95,10 @@ Billing is enforced **before computation**.
 
 Mechanism:
 
-1. API key is hashed deterministically (SHA-256)  
-2. Credits are decremented via a **single atomic database operation**  
-3. Failure halts execution  
-4. Success permits protocol execution  
+1. API key is hashed deterministically (SHA-256)
+2. Credits are decremented via a **single atomic database operation**
+3. Failure halts execution
+4. Success permits protocol execution
 5. A ledger entry is appended (non-blocking, write-once)
 
 There is no read-then-write race condition.
