@@ -1,4 +1,12 @@
-"__pycache__/"  
-"fidelity_ledger.json" 
-"venv/"        
-".venv/"       
+# env / secrets
+.env
+*.env
+temp_keys.txt
+
+# python
+__pycache__/
+*.pyc
+
+# editor
+.vscode/
+
