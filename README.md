@@ -11,240 +11,204 @@
 ## Purchase Access
 
 **$1,000 USD → 1,000,000 Credits**  
-Each invocation consumes **10 credits** and generates a **$0.01 fidelity tax**.
+Each invocation consumes **10 credits** and generates a **$0.01 USD fidelity tax**.
 
-➡️ **Stripe Checkout:** https://buy.stripe.com/6oUeVf0Nv61GgWR5i81kA00
+➡️ **Stripe Checkout:**  
+https://buy.stripe.com/6oUeVf0Nv61GgWR5i81kA00
 
-> After payment, your API key will be generated and delivered via email.
+> After payment, your API key is generated and delivered via email.
 
-If you prefer GitHub workflow, open a purchase request:  
+Alternative workflow:  
+Open a purchase request on GitHub:  
 https://github.com/Chambers-Protocol/chambers-protocol/issues/new?template=purchase.yml
 
 ---
 
 ## Overview
 
-Chambers Protocol is a mechanically enforced reasoning and billing layer designed to operate at the boundary between human input and machine computation.
+Chambers Protocol is a mechanically enforced reasoning and billing layer operating at the boundary between **human input** and **machine computation**.
 
-It exists to solve a specific problem:
+It exists to address a hard constraint:
 
-- Unbounded natural language generates entropy.  
-- Entropy generates heat.  
-- Heat limits computation.
+- Unbounded language generates entropy  
+- Entropy generates heat  
+- Heat limits computation  
 
-Chambers Protocol constrains this process by enforcing deterministic transformation, atomic accounting, and auditable cost surfaces at the moment computation is invoked.
+Chambers Protocol constrains this process by enforcing **deterministic transformation**, **atomic accounting**, and **auditable cost surfaces** at the moment computation is invoked.
 
-This repository hosts the MCP Server implementation of the protocol.
+This repository hosts the **production MCP Server implementation**.
 
 ---
 
 ## What This Is (Precisely)
 
-- A Model Context Protocol (MCP) Server
-- A deterministic transform gate between user input and model execution
-- A credit-metered, entropy-bounded compute interface
-- A write-once, auditable fidelity ledger
+Chambers Protocol is:
 
-A deterministic transform gate between user input and model execution
+- A **Model Context Protocol (MCP) Server**
+- A **deterministic transform gate** between user input and model execution
+- A **credit-metered, entropy-bounded compute interface**
+- A **write-once, auditable fidelity ledger**
 
-A credit-metered, entropy-bounded compute interface
+It is **not**:
 
-A write-once, auditable fidelity ledger
-
-This is not:
-
-a chatbot
-
-a prompt library
-
-a UX product
-
-an AI assistant
+- a chatbot  
+- a prompt library  
+- a UX product  
+- an AI assistant  
 
 It is infrastructure.
 
-Core Principle
+---
 
-Entropy must be paid for.
+## Core Principle
+
+**Entropy must be paid for.**
 
 Every invocation of the protocol:
 
-consumes a fixed amount of compute credits
+- consumes a fixed amount of credits  
+- generates a fixed fidelity tax  
+- is recorded in an append-only ledger  
+- executes **only after atomic verification**
 
-generates a fixed fidelity tax
-
-is recorded in an append-only ledger
-
-executes only after atomic verification
-
-No heuristics.
-No retries.
+No heuristics.  
+No retries.  
 No silent failures.
 
-Pricing
-Item	Value
-Initial purchase	$1,000 USD
-Credits received	1,000,000 credits
-Cost per MCP call	10 credits
-Fidelity tax per call	$0.01 USD
-Credit expiration	Never
+---
 
-Credits are consumed atomically at invocation time via Postgres RPC.
-If credits cannot be deducted, execution does not occur.
+## Pricing
 
-Deterministic Billing Model
+| Item | Value |
+|----|----|
+| Initial purchase | $1,000 USD |
+| Credits received | 1,000,000 |
+| Cost per MCP call | 10 credits |
+| Fidelity tax per call | $0.01 USD |
+| Credit expiration | Never |
 
-Billing is enforced before computation.
+Credits are consumed **atomically at invocation time** via Postgres RPC.  
+If credits cannot be deducted, execution **does not occur**.
+
+---
+
+## Deterministic Billing Model
+
+Billing is enforced **before computation**.
 
 Mechanism:
 
-API key is hashed deterministically (SHA-256)
-
-Credits are decremented via a single atomic database operation
-
-Failure halts execution
-
-Success permits protocol execution
-
-A ledger entry is appended (non-blocking, write-once)
+1. API key is hashed deterministically (SHA-256)  
+2. Credits are decremented via a **single atomic database operation**  
+3. Failure halts execution  
+4. Success permits protocol execution  
+5. A ledger entry is appended (non-blocking, write-once)
 
 There is no read-then-write race condition.
 
-Fidelity Ledger (Audit Guarantees)
+---
 
-All protocol executions are recorded in a write-once audit table.
+## Fidelity Ledger (Audit Guarantees)
 
-Ledger Properties
+All protocol executions are recorded in a **write-once audit table**.
 
-Append-only
+### Ledger Properties
 
-Timestamped
+- Append-only  
+- Timestamped  
+- Immutable  
+- Deterministic  
+- Human-auditable  
+- Machine-verifiable  
 
-Immutable
+### Canonical Ledger Fields
 
-Deterministic
+- `created_at`  
+- `client_email`  
+- `api_key_hash`  
+- `operation`  
+- `credits_cost`  
+- `fidelity_tax_usd`  
+- `request_id`  
+- `metadata`  
 
-Human-auditable
+Ledger writes are best-effort and non-blocking.  
+Execution **never depends on audit success**.
 
-Machine-verifiable
+---
 
-Ledger Fields (Canonical)
-
-created_at
-
-client_email
-
-api_key_hash
-
-operation
-
-credits_cost
-
-fidelity_tax_usd
-
-request_id
-
-metadata
-
-Ledger writes are best-effort but non-blocking.
-Execution never depends on audit success.
-
-Mechanical Guarantees
+## Mechanical Guarantees
 
 The system guarantees:
 
-Atomic credit consumption
+- Atomic credit consumption  
+- Deterministic hashing  
+- No floating state  
+- No silent degradation  
+- No anthropomorphic interpretation layer  
+- Explicit failure modes  
 
-Deterministic hashing
-
-No floating state
-
-No silent degradation
-
-No anthropomorphic interpretation layer
-
-Explicit failure modes
-
-If a request executes, it was paid for.
+If a request executes, it was paid for.  
 If it was not paid for, it does not execute.
 
-Security Model
+---
 
-API keys are never stored in plaintext
+## Security Model
 
-Only SHA-256 hashes are persisted
+- API keys are never stored in plaintext  
+- Only SHA-256 hashes are persisted  
+- Billing uses a server-side service role  
+- MCP tools expose no secret material  
+- Ledger is append-only by design  
 
-Billing uses a server-side service role
+Tampering with billing, hashing, or ledger logic **voids the license**.
 
-MCP tools expose no secret material
+---
 
-Ledger is append-only by design
+## License Model
 
-Tampering with billing, hashing, or ledger logic voids the license.
-
-License Model
-
-This repository is source-available.
+This repository is **source-available**.
 
 Commercial usage of the MCP server requires:
 
-a valid API key
+- a valid API key  
+- sufficient credits  
+- adherence to billing and ledger enforcement  
 
-sufficient credits
+See `LICENSE` for full terms.
 
-adherence to billing and ledger enforcement
+---
 
-See LICENSE for full terms.
-
-Intended Users
+## Intended Users
 
 This system is designed for:
 
-infrastructure engineers
-
-AI platform builders
-
-research systems
-
-enterprise compute governance
-
-anyone operating near thermodynamic or economic limits
+- infrastructure engineers  
+- AI platform builders  
+- research systems  
+- enterprise compute governance  
+- operators working near thermodynamic or economic limits  
 
 It is not designed for casual experimentation.
 
-Philosophy (Non-Marketing)
+---
+
+## Philosophy (Non-Marketing)
 
 Chambers Protocol treats:
 
-Language as energy
+- Language as energy  
+- Noise as heat  
+- Billing as conservation  
+- Determinism as cooling  
 
-Noise as heat
+These are **not metaphors inside the system**.  
+They are enforced mechanically.
 
-Billing as conservation
+---
 
-Determinism as cooling
+## Status
 
-This is not metaphorical inside the system.
-It is enforced mechanically.
-
-Purchase & Access
-
-To purchase access:
-
-👉 Create a GitHub issue using the “Purchase Access” template
-or
-👉 Follow the purchase instructions in PURCHASE.md
-
-You will receive:
-
-an API key
-
-a credit allocation
-
-usage documentation
-
-Status
-
-Production-ready
-Audited
-Live
+**Production-ready**  
+**Audited**  
+**Live**
