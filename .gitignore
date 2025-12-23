@@ -10,3 +10,15 @@ __pycache__/
 # editor
 .vscode/
 mint_license.py
+
+# Ignore Build Artifacts (Don't push the Installer)
+build/
+dist/
+*.spec
+
+# Ignore Environment Variables (Security)
+.env
+
+# Ignore Python Cache
+__pycache__/
+*.pyc
