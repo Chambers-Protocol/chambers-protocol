@@ -1,74 +1,54 @@
-# Chambers Protocol
-**Deterministic Reasoning Infrastructure for Entropy-Bound Systems**
+# Chambers Enterprise Grid
+**A Deterministic Infrastructure Multi-Node Cognitive Physics Engine for Enterprise AI and Industrial Intelligence**
 
-![License](https://img.shields.io/badge/License-Enterprise-blue)
-![Billing](https://img.shields.io/badge/Billing-Atomic-green)
-![Ledger](https://img.shields.io/badge/Ledger-Append--Only-blue)
+![Architecture](https://img.shields.io/badge/Architecture-Constellation-purple)
+![Nodes](https://img.shields.io/badge/Active_Nodes-10-blue)
+![Logic](https://img.shields.io/badge/Logic-Deterministic-green)
 ![Status](https://img.shields.io/badge/Status-Production-black)
 
 ---
 
-## 💎 Licensing & Access Tiers
+## 💎 Enterprise Licensing & Access
 
-The Chambers Protocol is an enterprise-grade cognitive infrastructure layer. Access is controlled via provisioned **Protocol Nodes**, which are licensed based on organizational scale rather than seat count.
+The Chambers Enterprise Grid is the unified deployment of the Chambers Protocol. It orchestrates 10 specialized "Physics Engines" that force Probabilistic Models (LLMs) to adhere to Deterministic Logic.
 
 We offer three tiers of node deployment:
 
 | Tier | Scale | Usage Model | Access Method |
 | :--- | :--- | :--- | :--- |
-| **Pilot Node** | Single Team (5-20 Users) | 25,000 Credit Allocation | [**Purchase License via Stripe ($1,000)**](https://buy.stripe.com/6oUeVf0Nv61GgWR5i81kA00) |
+| **Pilot Node** | Single Team (5-20 Users) | **25,000 Credit Allocation** | [**Purchase License via Stripe ($1,000)**](https://buy.stripe.com/6oUeVf0Nv61GgWR5i81kA00) |
 | **Divisional Node** | Department (50-500 Users) | Annual High-Volume License | [**Contact Research Team**](mailto:Research@theeinsteinbridge.com) |
 | **Enterprise Grid** | Global (Unlimited Users) | Unrestricted / Custom SLA | [**Contact Research Team**](mailto:Research@theeinsteinbridge.com) |
 
 ### 🔐 Provisioning Process
-
-**For Pilot Nodes (Self-Serve):**
-1. Complete the secure checkout via the Stripe link above.
-2. Your **License Key** will be automatically minted and delivered to your billing email.
-3. Download the **Enterprise Installer** linked in your welcome email.
-
-**For Divisional & Enterprise Grids:**
-Please contact `Research@theeinsteinbridge.com` to initiate a deployment audit.
-* Volume licensing agreements are available for annual terms.
-* Enterprise Nodes support silent deployment (SCCM/Intune) and custom security policies.
+* **Self-Serve:** Pilot Nodes are provisioned automatically upon payment.
+* **Enterprise:** Contact `Research@theeinsteinbridge.com` for volume licensing and custom security configurations (SCCM/Intune).
 
 ---
 
 ## Overview
 
-Chambers Protocol is a mechanically enforced reasoning and billing layer operating at the boundary between **human input** and **machine computation**.
-
-It exists to address a hard constraint:
+The Chambers Enterprise Grid operates at the boundary between **human input** and **machine computation**. It exists to address a hard constraint:
 
 - Unbounded language generates entropy
-- Entropy generates heat
+- Entropy generates heat (hallucination)
 - Heat limits computation
 
-Chambers Protocol constrains this process by enforcing **deterministic transformation**, **atomic accounting**, and **auditable cost surfaces** at the moment computation is invoked.
+The Grid constrains this process by forcing AI queries through specific, immutable logic kernels before an answer is permitted.
 
-This repository hosts the **production MCP Server implementation**.
+### The Constellation (Active Nodes)
+The Grid is comprised of specialized reasoning engines, each serving a specific industrial domain:
 
-Formal system guarantees and tester validation are documented in VERIFICATION.md.
-
----
-
-## What This Is (Precisely)
-
-Chambers Protocol is:
-
-- A **Model Context Protocol (MCP) Server**
-- A **deterministic transform gate** between user input and model execution
-- A **credit-metered, entropy-bounded compute interface**
-- A **write-once, auditable fidelity ledger**
-
-It is **not**:
-
-- a chatbot
-- a prompt library
-- a UX product
-- an AI assistant
-
-It is infrastructure.
+1.  **Risk Mechanics:** Multiplicative failure modeling (Finance/Compliance).
+2.  **Oil & Gas Singularity:** Extraction efficiency and safety algorithms.
+3.  **Venture Architecture:** Valuation and market velocity analysis.
+4.  **Cloud Operations:** Infrastructure, FinOps, and SRE logic.
+5.  **Cybersecurity:** Defense-in-depth posture auditing.
+6.  **Thermoelectric Innovation:** Energy physics and material science.
+7.  **Semiconductor Sustainability:** Fabrication yield vs. environmental cost.
+8.  **Product Strategy:** The "Idea to Exit" pipeline.
+9.  **Cognitive Framework:** Psychological profiling and decision mechanics.
+10. **Research (HPQAI):** High-Performance Quantum AI convergence.
 
 ---
 
@@ -76,33 +56,25 @@ It is infrastructure.
 
 **Entropy must be paid for.**
 
-Every invocation of the protocol:
-
+Every invocation of the Grid:
 - consumes a fixed amount of credits
 - generates a fixed fidelity tax
 - is recorded in an append-only ledger
 - executes **only after atomic verification**
 
-No heuristics.
-No retries.
-No silent failures.
+No heuristics. No retries. No silent failures.
 
 ---
 
 ## ⚡ Operational Usage
 
-The Protocol is a **Passive Logic Layer**. It does not monitor your conversation until invoked.
+The Grid is a **Passive Logic Layer**. It does not monitor your conversation until invoked.
 
-To activate the node, the user must explicitly pass control to the engine using the compile command.
+**For Enterprise Users (Auto-Invocation):**
+IT Administrators configure the `System Prompt` to automatically route complex queries to the specific node (e.g., questions about "Drilling" automatically trigger the `Oil & Gas Node`).
 
-**The Invocation Command:**
-> "Run this scenario through `protocol.compile`..."
-
-**Example Workflow:**
-1. User types: *"We are losing market share in the APAC region. Run this through protocol.compile to assess causality."*
-2. **Claude** recognizes the tool request.
-3. **Chambers Node** activates, deducts credits, and executes the logic.
-4. **Claude** receives the deterministic output and renders the response.
+**For Pilot Users (Manual Invocation):**
+> "Run this scenario through `[Node_Name]_audit`..."
 
 ---
 
@@ -111,11 +83,10 @@ To activate the node, the user must explicitly pass control to the engine using 
 Billing is enforced **before computation**.
 
 Mechanism:
-
 1. API key is hashed deterministically (SHA-256)
 2. Credits are decremented via a **single atomic database operation**
 3. Failure halts execution
-4. Success permits protocol execution
+4. Success permits logic execution
 5. A ledger entry is appended (non-blocking, write-once)
 
 There is no read-then-write race condition.
