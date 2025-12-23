@@ -33,6 +33,9 @@ if not NODE_API_KEY:
     print("❌ FATAL: No API Key found. Run the Setup Wizard first.", file=sys.stderr)
     sys.exit(1)
 
+# --- INITIALIZE SERVER ---
+mcp = FastMCP("Chambers Protocol Node")
+
 # --- 2. DATABASE CONNECTION ---
 supabase: Client = None
 

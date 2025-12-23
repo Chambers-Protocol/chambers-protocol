@@ -1,6 +1,6 @@
 ## Stripe Checkout Link
 
-➡️ https://buy.stripe.com/PASTE_YOUR_LINK_HERE
+➡️ https://buy.stripe.com/6oUeVf0Nv61GgWR5i81kA00
 
 Purchasing Access to Chambers Protocol
 
@@ -14,10 +14,8 @@ You are purchasing compute access credits, not software.
 
 Item	Value
 Product	Chambers Protocol Compute Credits
-Price	$1,000 USD
-Credits Issued	1,000,000 credits
 Cost per protocol invocation	10 credits
-Fidelity tax per invocation	$0.01 USD
+Fidelity tax per invocation  $0.04
 Credit expiration	None
 
 Credits are consumed atomically at execution time.
@@ -33,7 +31,7 @@ one-time payment
 
 USD currency
 
-fixed quantity (1,000,000 credits)
+fixed quantity (25,000 credits)
 
 No subscription is required.
 
@@ -57,7 +55,7 @@ The plaintext key is never stored
 
 A SHA-256 hash of the key is stored in the ledger
 
-The credit balance is initialized to 1,000,000 credits
+The credit balance is initialized to 25,000 credits
 
 The key is marked active
 
@@ -105,7 +103,7 @@ There is no retry credit refund mechanism.
 
 Fidelity Tax
 
-Each protocol invocation generates a $0.01 USD fidelity tax.
+Each protocol invocation generates a $0.04 USD fidelity tax.
 
 This tax:
 

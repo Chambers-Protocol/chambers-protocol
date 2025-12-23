@@ -56,5 +56,13 @@
     "fidelity_guarantee": "99.999999999%",
     "tax_captured": 0.001,
     "currency": "USD"
+  },
+  {
+    "timestamp": "2025-12-22T04:40:38.780495",
+    "client_id": "PRODUCTION_USER",
+    "operation": "SYNTAX_CONVERSION",
+    "fidelity_guarantee": "99.999999999%",
+    "tax_captured": 0.001,
+    "currency": "USD"
   }
 ]

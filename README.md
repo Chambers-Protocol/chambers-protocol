@@ -16,7 +16,7 @@ We offer three tiers of node deployment:
 
 | Tier | Scale | Usage Model | Access Method |
 | :--- | :--- | :--- | :--- |
-| **Pilot Node** | Single Team (5-20 Users) | 1,000,000 Credit Allocation | [**Purchase License via Stripe ($1,000)**](https://buy.stripe.com/6oUeVf0Nv61GgWR5i81kA00) |
+| **Pilot Node** | Single Team (5-20 Users) | 25,000 Credit Allocation | [**Purchase License via Stripe ($1,000)**](https://buy.stripe.com/6oUeVf0Nv61GgWR5i81kA00) |
 | **Divisional Node** | Department (50-500 Users) | Annual High-Volume License | [**Contact Research Team**](mailto:Research@theeinsteinbridge.com) |
 | **Enterprise Grid** | Global (Unlimited Users) | Unrestricted / Custom SLA | [**Contact Research Team**](mailto:Research@theeinsteinbridge.com) |
 
