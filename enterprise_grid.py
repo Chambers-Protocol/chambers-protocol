@@ -62,10 +62,11 @@ engines = {
 # Connect to Ledger
 try:
     supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
-    print("✅ ENTERPRISE GRID: Connected to Central Ledger")
-    print(f"🚀 ACTIVE NODES: {len(engines)} Physics Engines Online")
+    # We send logs to stderr so we don't break the JSON stream
+    print("✅ ENTERPRISE GRID: Connected to Central Ledger", file=sys.stderr)
+    print(f"🚀 ACTIVE NODES: {len(engines)} Physics Engines Online", file=sys.stderr)
 except Exception as e:
-    print(f"❌ FATAL: Ledger Connection Failed - {e}")
+    print(f"❌ FATAL: Ledger Connection Failed - {e}", file=sys.stderr)
     sys.exit(1)
 
 # --- 4. UNIFIED BILLING GATE ---
@@ -73,7 +74,11 @@ def bill_usage(node_name: str, cost=10):
     """
     One function to bill them all.
     """
-    if not NODE_API_KEY: return False
+    if not NODE_API_KEY: 
+        # Log this to stderr so you can see it in logs, but return False safely
+        print(f"Billing Error ({node_name}): Missing API Key", file=sys.stderr)
+        return False
+        
     hashed_key = hashlib.sha256(NODE_API_KEY.encode()).hexdigest()
     
     try:
@@ -87,7 +92,8 @@ def bill_usage(node_name: str, cost=10):
         }).execute()
         return response.data
     except Exception as e:
-        print(f"Billing Error ({node_name}): {e}")
+        # <--- THIS WAS THE PROBLEM LINE. NOW IT GOES TO STDERR.
+        print(f"Billing Error ({node_name}): {e}", file=sys.stderr)
         return False
 
 # --- 5. REGISTER ALL TOOLS ---
@@ -194,5 +200,5 @@ def semiconductor_fab_audit(inputs: str) -> str:
 
 # --- 6. LAUNCH ---
 if __name__ == "__main__":
-    print("💎 CHAMBERS ENTERPRISE GRID: ONLINE")
+    print("💎 CHAMBERS ENTERPRISE GRID: ONLINE", file=sys.stderr) # <--- Fixed
     mcp.run()

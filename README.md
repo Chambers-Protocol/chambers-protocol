@@ -1,5 +1,5 @@
 # Chambers Enterprise Grid
-**A Deterministic Infrastructure Multi-Node Cognitive Physics Engine for Enterprise AI and Industrial Intelligence**
+**A Deterministic Reasoning Infrastructure Multi-Node Cognitive Physics Engine for Enterprise AI and Industrial Intelligence**
 
 ![Architecture](https://img.shields.io/badge/Architecture-Constellation-purple)
 ![Nodes](https://img.shields.io/badge/Active_Nodes-10-blue)

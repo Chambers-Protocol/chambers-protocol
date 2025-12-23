@@ -12,9 +12,10 @@ __pycache__/
 mint_license.py
 
 # Ignore Build Artifacts (Don't push the Installer)
-build/
 dist/
+build/
 *.spec
+*.exe
 
 # Ignore Environment Variables (Security)
 .env
@@ -22,3 +23,7 @@ dist/
 # Ignore Python Cache
 __pycache__/
 *.pyc
+
+# Security
+.env
+__pycache__/
