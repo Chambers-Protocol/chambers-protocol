@@ -89,6 +89,23 @@ No silent failures.
 
 ---
 
+## ⚡ Operational Usage
+
+The Protocol is a **Passive Logic Layer**. It does not monitor your conversation until invoked.
+
+To activate the node, the user must explicitly pass control to the engine using the compile command.
+
+**The Invocation Command:**
+> "Run this scenario through `protocol.compile`..."
+
+**Example Workflow:**
+1. User types: *"We are losing market share in the APAC region. Run this through protocol.compile to assess causality."*
+2. **Claude** recognizes the tool request.
+3. **Chambers Node** activates, deducts credits, and executes the logic.
+4. **Claude** receives the deterministic output and renders the response.
+
+---
+
 ## Deterministic Billing Model
 
 Billing is enforced **before computation**.
