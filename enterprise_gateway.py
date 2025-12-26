@@ -199,6 +199,46 @@ def sim_hive_mind_swarm(agent_count: int, goal_title: str) -> str:
     }
     return json.dumps(summary, indent=2)
 
+@mcp.tool()
+def read_hive_mind_status(query_string: str = "") -> str:
+    """
+    Queries the persistent HiveMind memory.
+    Use this to check the status of goals, find existing IDs, or audit the swarm's memory.
+    Input: 'query_string' (Optional) - Filter by goal title (e.g., 'Project Eternity').
+    Cost: 10 CR (Cheap read operation).
+    """
+    pay_toll("hive_read", 10)
+    
+    hmc = HiveMindCore()
+    
+    # 1. Fetch all goal keys
+    # Note: In a real prod environment, we'd add a specialized SQL search function.
+    # Here, we scan the keys (efficient enough for <1000 goals).
+    all_keys = hmc.store.keys("goal:")
+    
+    found_goals = []
+    for key in all_keys:
+        # Strip prefix to get ID
+        goal_id = key.replace("goal:", "")
+        node = hmc.goals.get(goal_id)
+        
+        # Simple text matching
+        if not query_string or (query_string.lower() in node.title.lower()):
+            found_goals.append({
+                "goal_id": node.goal_id,
+                "title": node.title,
+                "status": node.status,
+                "created": node.created_at_ms,
+                "priority": node.priority.name
+            })
+            
+    return json.dumps({
+        "status": "ONLINE",
+        "memory_backend": "Supabase (Persistent)",
+        "goals_found": len(found_goals),
+        "results": found_goals
+    }, indent=2)
+
 if __name__ == "__main__":
     # SWITCHING TO HARDLINE MODE (STDIO)
     # This connects strictly to Claude without using Port 8000.
