@@ -26,4 +26,4 @@ __pycache__/
 
 # Security
 .env
-__pycache__/
+__pycache__/.env 
