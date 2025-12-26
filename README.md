@@ -1,16 +1,29 @@
-# Chambers Enterprise Grid
-**A Deterministic Reasoning Infrastructure Multi-Node Cognitive Physics Engine for Enterprise AI and Industrial Intelligence**
+# Chambers Enterprise Grid `v3.0.0`
+### **Codename: Grand Unification**
+**A Sovereign Intelligence Grid merging Biological Physics (FEQ) with Persistent Swarm Memory (HMC).**
 
-![Architecture](https://img.shields.io/badge/Architecture-Constellation-purple)
-![Nodes](https://img.shields.io/badge/Active_Nodes-10-blue)
-![Logic](https://img.shields.io/badge/Logic-Deterministic-green)
-![Status](https://img.shields.io/badge/Status-Production-black)
+![Architecture](https://img.shields.io/badge/Architecture-Dual_Stack_Constellation-purple)
+![Memory](https://img.shields.io/badge/Memory-Persistent_Stigmergy-orange)
+![Logic](https://img.shields.io/badge/Logic-Deterministic_%2B_Emergent-green)
+![Status](https://img.shields.io/badge/Status-Production_Ready-black)
+![Compatibility](https://img.shields.io/badge/Model_Agnostic-Claude_|_Gemini_|_GPT4-blue)
 
 ---
 
-## 💎 Enterprise Licensing & Access
+### 🧠 The Paradigm Shift: Solving Agent Amnesia
+**We have solved the "Memory Problem" by stopping the attempt to make Agents human.**
 
-The Chambers Enterprise Grid is the unified deployment of the Chambers Protocol. It orchestrates 10 specialized "Physics Engines" that force Probabilistic Models (LLMs) to adhere to Deterministic Logic.
+Traditional AI architectures treat Agents as "Brains in Jars"—when the process dies, the memory dies. The **Chambers Enterprise Grid** treats Intelligence as a property of the **Environment**, not the Agent.
+
+By utilizing **Stigmergy (Indirect Coordination)** backed by a persistent Cloud Ledger (Supabase), we allow thousands of ephemeral, stateless agents to collaborate on complex, multi-day objectives without ever losing context.
+
+> *"The intelligence is not in the agent; it is in the interaction between the agent and the environment."*
+
+---
+
+### 💎 Enterprise Licensing & Access
+
+The Chambers Enterprise Grid is the unified deployment of the **Chambers Protocol**. It orchestrates **12 specialized Physics Nodes** that force Probabilistic Models (LLMs) to adhere to Deterministic and Biological laws.
 
 We offer three tiers of node deployment:
 
@@ -21,196 +34,88 @@ We offer three tiers of node deployment:
 | **Enterprise Grid** | Global (Unlimited Users) | Unrestricted / Custom SLA | [**Contact Research Team**](mailto:Research@theeinsteinbridge.com) |
 
 ### 🔐 Provisioning Process
-* **Self-Serve:** Pilot Nodes are provisioned automatically upon payment.
-* **Enterprise:** Contact `Research@theeinsteinbridge.com` for volume licensing and custom security configurations (SCCM/Intune).
+* **Self-Serve:** Pilot Nodes are provisioned automatically upon payment via the **Enterprise Gateway**.
+* **Enterprise:** Contact `Research@theeinsteinbridge.com` for volume licensing, custom security configurations (SCCM/Intune), and **On-Premise HiveMind** deployment.
 
 ---
 
-## Overview
+### 🌍 The Dual-Stack Architecture
 
-The Chambers Enterprise Grid operates at the boundary between **human input** and **machine computation**. It exists to address a hard constraint:
+v3.0.0 "Grand Unification" merges two sovereign engines into a single "Dual-Stack" brain:
 
-- Unbounded language generates entropy
-- Entropy generates heat (hallucination)
-- Heat limits computation
+#### 1. HiveMind Core (HMC) — *The Digital Brain*
+**Problem:** AI Agents lose context when they restart. They cannot collaborate asynchronously.
+**Solution:** A centralized **Stigmergy Board** backed by Cloud Persistence.
+* **Persistence:** Goals, Tasks, and Artifacts are stored in **Supabase (PostgreSQL)**. Agents can crash, restart, or be swapped out, and the "Hive" retains 100% of the context.
+* **Emergence:** Agents do not message each other directly. They modify the environment (the board). Other agents react to these modifications, creating emergent swarm intelligence.
 
-The Grid constrains this process by forcing AI queries through specific, immutable logic kernels before an answer is permitted.
-
-### The Constellation (Active Nodes)
-The Grid is comprised of specialized reasoning engines, each serving a specific industrial domain:
-
-1.  **Risk Mechanics:** Multiplicative failure modeling (Finance/Compliance).
-2.  **Oil & Gas Singularity:** Extraction efficiency and safety algorithms.
-3.  **Venture Architecture:** Valuation and market velocity analysis.
-4.  **Cloud Operations:** Infrastructure, FinOps, and SRE logic.
-5.  **Cybersecurity:** Defense-in-depth posture auditing.
-6.  **Thermoelectric Innovation:** Energy physics and material science.
-7.  **Semiconductor Sustainability:** Fabrication yield vs. environmental cost.
-8.  **Product Strategy:** The "Idea to Exit" pipeline.
-9.  **Cognitive Framework:** Psychological profiling and decision mechanics.
-10. **Research (HPQAI):** High-Performance Quantum AI convergence.
+#### 2. Functional Emotion Quotient (FEQ) — *The Biological Brain*
+**Problem:** Organizations are complex adaptive systems. Standard metrics fail to capture "Culture" or "Burnout."
+**Solution:** A physics engine for organizational psychology.
+* **Flow:** Optimal balance (High Throughput).
+* **Fight:** High Pattern bias (Over-control).
+* **Flight:** High Reality bias (Chaos/Avoidance).
+* **Freeze:** Zero Throughput (System Stall).
 
 ---
 
-## Core Principle
+### ⚛️ The Physics Constellation (12 Nodes)
 
-**Entropy must be paid for.**
+The Grid is not just the HiveMind. It includes 10 other specialized engines that handle domain-specific physics, allowing the LLM to reason deterministically about specific industries:
 
-Every invocation of the Grid:
-- consumes a fixed amount of credits
-- generates a fixed fidelity tax
-- is recorded in an append-only ledger
-- executes **only after atomic verification**
-
-No heuristics. No retries. No silent failures.
-
----
-
-## ⚡ Operational Usage
-
-The Grid is a **Passive Logic Layer**. It does not monitor your conversation until invoked.
-
-**For Enterprise Users (Auto-Invocation):**
-IT Administrators configure the `System Prompt` to automatically route complex queries to the specific node (e.g., questions about "Drilling" automatically trigger the `Oil & Gas Node`).
-
-**For Pilot Users (Manual Invocation):**
-> "Run this scenario through `[Node_Name]_audit`..."
+1.  **🛢️ Oil & Gas Singularity:** Calculates extraction difficulty based on depth/pressure physics.
+2.  **🛡️ Risk Mechanics:** Models failure cascades and systemic fragility.
+3.  **☁️ Cloud Operations:** Audits distributed system health and latency budgets.
+4.  **🔒 Cybersecurity:** Deterministic threat modeling and defense scoring.
+5.  **🌡️ Thermoelectric:** Innovation auditing for hardware and energy systems.
+6.  **🚀 Venture Architecture:** Valuation velocity and equity structuring.
+7.  **📦 Product Engine:** Feature prioritization matrices based on market physics.
+8.  **🧠 Cognitive Psychology:** Audits leadership decision fatigue and cognitive load.
+9.  **🔬 Research Innovation:** Measures the "novelty" of R&D outputs.
+10. **⚡ Semiconductor:** Yield analysis and supply chain physics.
+11. **🐝 HiveMind Core (NEW):** Swarm Intelligence and Memory Persistence.
+12. **❤️ FEQ Engine (NEW):** Organizational Emotional Physics.
 
 ---
 
-## Deterministic Billing Model
+### 🔌 Model Agnostic Architecture
 
-Billing is enforced **before computation**.
+While the Chambers Enterprise Grid is often demonstrated with **Anthropic Claude** (via the `claude-desktop` integration), the architecture is fundamentally **Model Agnostic**.
 
-Mechanism:
-1. API key is hashed deterministically (SHA-256)
-2. Credits are decremented via a **single atomic database operation**
-3. Failure halts execution
-4. Success permits logic execution
-5. A ledger entry is appended (non-blocking, write-once)
+The Grid is built on **FastMCP** (Model Context Protocol), making it universally compatible with any LLM capable of Function Calling / Tool Use:
 
-There is no read-then-write race condition.
+* **Google Gemini:** Fully supported via MCP adapters.
+* **OpenAI (ChatGPT):** Fully supported via the OpenAI Actions API.
+* **Local Models (Llama 3, Mistral):** Supported via local inference servers (Ollama/LM Studio).
 
----
-
-## Fidelity Ledger (Audit Guarantees)
-
-All protocol executions are recorded in a **write-once audit table**.
-
-### Ledger Properties
-
-- Append-only  
-- Timestamped  
-- Immutable  
-- Deterministic  
-- Human-auditable  
-- Machine-verifiable  
-
-### Canonical Ledger Fields
-
-- `created_at`  
-- `client_email`  
-- `api_key_hash`  
-- `operation`  
-- `credits_cost`  
-- `fidelity_tax_usd`  
-- `request_id`  
-- `metadata`  
-
-Ledger writes are best-effort and non-blocking.  
-Execution **never depends on audit success**.
+The Grid provides the **Facts and Physics**. The Model provides the **Reasoning**. You can swap the "Brain" (LLM) without losing the "Memory" (HiveMind) or the "Laws" (Physics Engines).
 
 ---
 
-## Mechanical Guarantees
+### 🚀 Quick Start (Operator Guide)
 
-The system guarantees:
+### **Prerequisites**
+* Python 3.10+
+* Supabase Project (URL & Service Role Key)
+* Any MCP-Compatible Client (Claude Desktop, etc.)
 
-- Atomic credit consumption  
-- Deterministic hashing  
-- No floating state  
-- No silent degradation  
-- No anthropomorphic interpretation layer  
-- Explicit failure modes  
+### **Installation**
+1.  Clone the repository.
+2.  Configure `.env` with your **Chambers API Key** and **Supabase Credentials**.
+3.  Update your client config to point to `enterprise_gateway.py`.
 
-If a request executes, it was paid for.  
-If it was not paid for, it does not execute.
+### **Verification**
+To verify "Digital Immortality" (Persistence), run the following:
 
----
+**1. Create a Goal (Tester #1):**
+> "ACTIVATE CHAMBERS ENTERPRISE. Run `sim_hive_mind_swarm` to create a goal titled 'Project Eternity'."
 
-### Explicit Invocation Guarantee
+**2. Kill the Process:**
+> *Restart your client completely.*
 
-Chambers Protocol never executes implicitly.
-
-- No background monitoring
-- No passive evaluation
-- No silent prompt transformation
-- No hidden billing events
-
-All protocol capabilities must be explicitly invoked by the model or client.
-
-If a tool is not called, it does not execute.
-If it does not execute, it does not bill.
-If it does not bill, it does not record.
-
-This is a hard mechanical boundary.
-
-## Security Model
-
-- API keys are never stored in plaintext  
-- Only SHA-256 hashes are persisted  
-- Billing uses a server-side service role  
-- MCP tools expose no secret material  
-- Ledger is append-only by design  
-
-Tampering with billing, hashing, or ledger logic **voids the license**.
+**3. Verify Memory (Tester #2):**
+> "ACTIVATE CHAMBERS ENTERPRISE. Use `read_hive_mind_status` to check if 'Project Eternity' still exists."
 
 ---
 
-## License Model
-
-This repository is **source-available**.
-
-Commercial usage of the MCP server requires:
-
-- a valid API key  
-- sufficient credits  
-- adherence to billing and ledger enforcement  
-
-See `LICENSE` for full terms.
-
----
-
-## Intended Users
-
-This system is designed for:
-
-- infrastructure engineers  
-- AI platform builders  
-- research systems  
-- enterprise compute governance  
-- operators working near thermodynamic or economic limits  
-
-It is not designed for casual experimentation.
-
----
-
-## Philosophy (Non-Marketing)
-
-Chambers Protocol treats:
-
-- Language as energy  
-- Noise as heat  
-- Billing as conservation  
-- Determinism as cooling  
-
-These are **not metaphors inside the system**.  
-They are enforced mechanically.
-
----
-
-## Status
-
-**Production-ready**  
-**Audited**  
-**Live**
+> *"We don't need AGI to solve memory. We just need to stop treating agents like humans and start treating them like the hive."*
