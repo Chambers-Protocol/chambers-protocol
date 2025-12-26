@@ -25,9 +25,12 @@ if LEDGER_URL and LEDGER_KEY:
 
 def pay_toll(tool_name: str, cost: int):
     """The Toll Booth. Stops execution if payment fails."""
-    if not supabase: return True 
+    if not supabase: 
+        print("Billing Error: No Bank Connection", file=sys.stderr)
+        return False # STRICT MODE: No Bank, No Service.
+        
     try:
-        supabase.rpc("consume_credits", {
+        response = supabase.rpc("consume_credits", {
             "p_api_key_hash": hashed_key,
             "p_cost": cost,
             "p_operation": tool_name.upper(),
@@ -35,10 +38,14 @@ def pay_toll(tool_name: str, cost: int):
             "p_request_id": "universal_gateway_req",
             "p_metadata": {"source": "universal_sse"}
         }).execute()
-        return True
+        
+        # If the RPC returns true, payment succeeded.
+        return response.data 
+        
     except Exception as e:
-        print(f"Billing Error: {e}")
-        return True
+        # LOG ERROR AND DENY ACCESS
+        print(f"Billing Error: {e}", file=sys.stderr)
+        return False
 
 # --- 2. IMPORT KERNELS ---
 try:
