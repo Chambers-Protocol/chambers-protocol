@@ -4,6 +4,7 @@ import sys
 from fastmcp import FastMCP
 from dotenv import load_dotenv
 from supabase import create_client
+from nodes.physics.resource_mobility import ResourceMobilityEngine, MobilityInputs
 
 # --- 1. SETUP SECURITY & BILLING ---
 load_dotenv()
@@ -238,6 +239,56 @@ def read_hive_mind_status(query_string: str = "") -> str:
         "goals_found": len(found_goals),
         "results": found_goals
     }, indent=2)
+
+@mcp.tool()
+def audit_resource_mobility(structure_score: float, segment_count: int, adaptation_rate: float) -> str:
+    """
+    Calculates the Resource Mobility Index (RMI) and Corporate Longevity Score.
+    Use this to audit a company's ability to move capital/talent and predict survival.
+    
+    Inputs:
+    - structure_score (1-5): 1=Siloed/Centralized, 5=Boundaryless/Hybrid Matrix.
+    - segment_count (1-10): Degree of business diversification.
+    - adaptation_rate (1-10): Velocity of M&A, Spinoffs, or Reorgs.
+    
+    Cost: 25 CR (Financial Physics Audit)
+    """
+    # 1. Billing
+    if not pay_toll("RMI_AUDIT", 25):
+        return "Access Denied: Insufficient Credits."
+
+    # 2. Execution
+    try:
+        engine = ResourceMobilityEngine()
+        inputs = MobilityInputs(
+            structure_score=structure_score,
+            segment_count=segment_count,
+            adaptation_rate=adaptation_rate
+        )
+        result = engine.calculate(inputs)
+        
+        return json.dumps({
+            "audit_type": "RESOURCE_MOBILITY_PHYSICS",
+            "inputs": {
+                "Ss (Structure)": structure_score,
+                "Sc (Segments)": segment_count,
+                "Ar (Adaptation)": adaptation_rate
+            },
+            "physics_outputs": {
+                "RMI_Weighted_Score": result.rmi_score,
+                "Longevity_Score_LS": result.longevity_score,
+                "Lurking_Derivative": result.marginal_return,
+                "Interpretation": f"For every 1 unit increase in mobility, longevity increases by {result.marginal_return} points."
+            },
+            "verdict": {
+                "Tier": result.classification,
+                "Analysis": result.narrative
+            }
+        }, indent=2)
+        
+    except Exception as e:
+        print(f"RMI Engine Error: {e}", file=sys.stderr)
+        return json.dumps({"error": "Physics Calculation Failed"})
 
 if __name__ == "__main__":
     # SWITCHING TO HARDLINE MODE (STDIO)
