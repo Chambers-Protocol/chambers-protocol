@@ -1,0 +1,2 @@
+[GATEWAY] Startup Success. Key Hash starts with: bbe9cb6e
+[GATEWAY] Billing Crash: {'message': 'License not found for this API Key.', 'code': 'P0001', 'hint': None, 'details': None}

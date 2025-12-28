@@ -23,7 +23,7 @@ In **v3.1.0 (Icarus)**, we expanded the grid beyond memory and emotion to includ
 
 ### 💎 Enterprise Licensing & Access
 
-The Chambers Enterprise Grid is the unified deployment of the **Chambers Protocol**. It orchestrates **13 specialized Physics Nodes** that force Probabilistic Models (LLMs) to adhere to Deterministic and Biological laws.
+The Chambers Enterprise Grid is the unified deployment of the **Chambers Protocol**. It orchestrates **13 specialized Physics Nodes** (compiled as Sovereign Binaries) that force Probabilistic Models (LLMs) to adhere to Deterministic and Biological laws.
 
 We offer three tiers of node deployment:
 
