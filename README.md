@@ -1,4 +1,4 @@
-# Chambers Enterprise Grid `v3.1.0`
+# Chambers Enterprise Grid `v3.2.0`
 ### **Codename: The Icarus Release**
 **A Sovereign Intelligence Grid merging Biological Physics (FEQ), Swarm Memory (HMC), and Capital Thermodynamics (RMI).**
 
@@ -15,7 +15,7 @@
 
 Traditional AI architectures treat Agents as "Brains in Jars." The **Chambers Enterprise Grid** treats Intelligence as a property of the **Environment**.
 
-In **v3.1.0 (Icarus)**, we expanded the grid beyond memory and emotion to include **Capital Physics**. We discovered that organizational efficiency has a "Speed Limit"—beyond which capital moves so fast it tears the structural bonds of the company apart.
+In **v3.2.0 (Icarus)**, we expanded the grid beyond memory and emotion to include **Capital Physics**. We discovered that organizational efficiency has a "Speed Limit"—beyond which capital moves so fast it tears the structural bonds of the company apart.
 
 > *"The intelligence is not in the agent; it is in the interaction between the agent and the environment."*
 
@@ -39,7 +39,7 @@ We offer three tiers of node deployment:
 
 ---
 
-### ☄️ The Icarus Discovery (New in v3.1.0)
+### ☄️ The Icarus Discovery (New in v3.2.0)
 
 With the introduction of the **Resource Mobility Index (RMI)** engine, the Grid now models **Organizational Thermodynamics**.
 
@@ -57,7 +57,7 @@ Previous economic models assumed "More Efficiency = Better." Our physics engine 
 
 ### 🌍 The Triad Architecture
 
-v3.1.0 merges three sovereign engines into a single "Triad" brain:
+v3.2.0 merges three sovereign engines into a single "Triad" brain:
 
 #### 1. HiveMind Core (HMC) — *The Digital Brain*
 **Problem:** AI Agents lose context when they restart.
@@ -120,7 +120,7 @@ The Grid provides the **Facts and Physics**. The Model provides the **Reasoning*
 1.  Clone the repository.
 2.  Configure `.env` with your **Chambers API Key** and **Supabase Credentials**.
 3.  Update your client config to point to `enterprise_gateway.py`.
-    * *Note: v3.1.0 includes absolute path resolution fixes for production deployment.*
+    * *Note: v3.2.0 includes absolute path resolution fixes for production deployment.*
 
 ### **Verification**
 To verify the **Icarus Physics Engine**:
